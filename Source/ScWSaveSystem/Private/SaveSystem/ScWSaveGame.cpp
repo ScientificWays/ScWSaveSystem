@@ -1,8 +1,8 @@
 // Scientific Ways
 
-#include "SaveGame/ScWSaveGame.h"
+#include "SaveSystem/ScWSaveGame.h"
 
-#include "SaveGame/ScWSaveGameSubsystem.h"
+#include "SaveSystem/ScWSaveGameSubsystem.h"
 
 //~ Begin ScW SaveGame System
 const FString& UScWSaveGame::GetCurrentSaveGameDataSlot(const UObject* InWCO)
