@@ -4,12 +4,17 @@
 
 #include "ScWSaveSystem.h"
 
+#include "Subsystems/GameInstanceSubsystem.h"
+
 #include "ScWSaveGameSubsystem.generated.h"
 
 #define MODULE_API SCWSAVESYSTEM_API
 
+class UObject;
+class UScWSaveGame;
+
 /**
- *
+ *	Tracks the currently loaded save slot, user index, and save object for the active game instance.
  */
 UCLASS(MinimalAPI, meta = (DisplayName = "[ScW] Save Game Subsystem"))
 class UScWSaveGameSubsystem : public UGameInstanceSubsystem
@@ -32,7 +37,7 @@ public:
 	int32 CurrentSaveDataUserIndex;
 
 	UPROPERTY(Category = "Save Data", BlueprintReadOnly)
-	TObjectPtr<class UScWSaveGame> CurrentSaveDataObject;
+	TObjectPtr<UScWSaveGame> CurrentSaveDataObject;
 //~ End Data
 };
 

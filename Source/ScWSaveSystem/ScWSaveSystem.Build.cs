@@ -1,7 +1,6 @@
 // Scientific Ways
 
 using UnrealBuildTool;
-using System.IO; // for Path
 
 public class ScWSaveSystem : ModuleRules
 {
@@ -19,13 +18,11 @@ public class ScWSaveSystem : ModuleRules
 			"Core",
 			"CoreUObject",
 			"Engine",
-
-			"ScWGameCore",
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[]
 		{
-			
+			"ScWGameCore",
 		});
 	}
 }
